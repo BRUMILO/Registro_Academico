@@ -19,6 +19,9 @@ class Estudiante:
         print(f"> Carrera: {self.carrera}")
         if mostrar_notas:
             print("----------------------------------")
-            for i in self.notas:
-                i.ver_nota()        
+            if self.notas != []:
+                for i in self.notas:
+                    i.ver_nota()
+            else:
+                print("| El estudiante no tiene notas registradas |")
         print("=================================")
